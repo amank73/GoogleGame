@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Internet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #202124;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            color: #e8eaed;
+        }
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .game-content {
+            flex: 1;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;  /* Changed from normal to bold */
+            margin-bottom: 10px;
+        }
+        .error-code {
+            color: #9aa0a6;
+            margin-top: 20px;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        canvas {
+            background-color: #202124;
+        }
+        .score, canvas {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .score {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #e8eaed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-content">
+            <h1>No Internet</h1>
+            <p>Try:</p>
+            <ul>
+                <li>Checking the network cables, modem, and router</li>
+                <li>Reconnecting to Wi-Fi</li>
+            </ul>
+            <div class="error-code">ERR_INTERNET_DISCONNECTED</div>
+        </div>
+        <div class="game-content">
+            <canvas id="gameCanvas" width="600" height="400"></canvas>
+            <div class="score">HI <span id="highScore">00000</span> <span id="currentScore">00000</span></div>
+        </div>
+    </div>
+    
+    <img src="asteroid.png" style="display: none;" alt="Asteroid Image">
+    <img src="ship.png" style="display: none;" alt="Ship Image">
+
+    <script src="GoogleGame.js"></script>
+</body>
+</html>
